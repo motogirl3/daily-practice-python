@@ -14,3 +14,11 @@ This repository contains my small exercises and experiments in Python.
 
 ## Progress
 Started: April 2026
+
+## Mini Projects
+- Guess the Number game
+
+## What I learned
+- Functions
+- Conditions
+- Loops
