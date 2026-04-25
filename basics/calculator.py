@@ -1,5 +1,11 @@
 a = 5
 b = 3
 
-print("Sum:", a + b)
-print("Multiply:", a * b)
+def add(x, y):
+    return x + y
+
+def multiply(x, y):
+    return x * y
+
+print("Sum:", add(a, b))
+print("Multiply:", multiply(a, b))
