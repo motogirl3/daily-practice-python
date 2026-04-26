@@ -1,3 +1,5 @@
+FILE_NAME = "tasks.txt"
+
 from utils import print_line
 
 def load_tasks():
