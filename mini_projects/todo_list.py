@@ -1,3 +1,5 @@
+from utils import print_line
+
 def load_tasks():
     try:
         with open("tasks.txt", "r") as file:
@@ -11,9 +13,11 @@ def save_tasks(tasks):
             file.write(task + "\n")
 
 def show_tasks(tasks):
-    print("\nYour tasks:")
+    print_line()
+    print("Your tasks:")
     for t in tasks:
         print("-", t)
+    print_line()
 
 tasks = load_tasks()
 
