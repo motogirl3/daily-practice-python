@@ -22,3 +22,14 @@ Started: April 2026
 - Functions
 - Conditions
 - Loops
+
+## Examples
+
+### Calculator
+Basic math operations: +, -, *, /
+
+### Todo List
+Console app to manage tasks
+
+### Guess Game
+Simple number guessing game
