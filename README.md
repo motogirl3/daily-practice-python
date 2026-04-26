@@ -8,9 +8,9 @@ This repository contains my small exercises and experiments in Python.
 - Build consistent coding habit
 
 ## Structure
-- basics/
-- mini_projects/
-- notes/
+- basics/ — simple Python examples
+- mini_projects/ — small projects
+- notes/ — learning notes
 
 ## Progress
 Started: April 2026
