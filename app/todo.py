@@ -1,9 +1,12 @@
-class TodoApp:
-    def __init__(self):
-        self.tasks = []
+from storage import load_tasks, save_tasks
 
-    def add_task(self, task):
-        self.tasks.append(task)
+class TodoApp:
+  def __init__(self):
+    self.tasks = load_tasks()
+
+  def add_task(self, task):
+    self.tasks.append(task)
+    save_tasks(self.tasks)
 
     def show_tasks(self):
         print("\nTasks:")
