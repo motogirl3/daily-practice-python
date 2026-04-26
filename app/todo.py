@@ -14,12 +14,22 @@ class TodoApp:
             print("-", t)
 
     def run(self):
-        while True:
-            task = input("Enter task (or 'exit'): ")
+    while True:
+        print("\n1. Add task")
+        print("2. Show tasks")
+        print("3. Exit")
 
-            if task == "exit":
-                break
+        choice = input("Choose option: ")
 
+        if choice == "1":
+            task = input("Enter task: ")
             self.add_task(task)
 
-        self.show_tasks()
+        elif choice == "2":
+            self.show_tasks()
+
+        elif choice == "3":
+            break
+
+        else:
+            print("Invalid choice")
