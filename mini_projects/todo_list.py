@@ -22,7 +22,11 @@ def show_tasks(tasks):
 tasks = load_tasks()
 
 while True:
+   try:
     task = input("Enter task (or 'exit'): ")
+except Exception as e:
+    print("Error:", e)
+    continue
 
     if task == "exit":
         break
