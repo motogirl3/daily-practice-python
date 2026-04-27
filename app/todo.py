@@ -8,10 +8,15 @@ class TodoApp:
     self.tasks.append(task)
     save_tasks(self.tasks)
 
-    def show_tasks(self):
-        print("\nTasks:")
-        for t in self.tasks:
-            print("-", t)
+    def ```python id="h4v8xg"
+def show_tasks(self):
+    if not self.tasks:
+        print("\nNo tasks yet")
+        return
+
+    print("\nTasks:")
+    for i, t in enumerate(self.tasks, 1):
+        print(f"{i}. {t}")
 
     def run(self):
     while True:
