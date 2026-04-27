@@ -33,3 +33,8 @@ Console app to manage tasks
 
 ### Guess Game
 Simple number guessing game
+
+## How to run
+
+```bash
+python app/main.py
