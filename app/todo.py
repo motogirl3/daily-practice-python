@@ -64,3 +64,11 @@ elif choice == "4":
 
         else:
             print("Invalid choice")
+
+def mark_done(self, index):
+    try:
+        self.tasks[index]["done"] = True
+        save_tasks(self.tasks)
+        print("Task marked as done")
+    except IndexError:
+        print("Invalid task number")
