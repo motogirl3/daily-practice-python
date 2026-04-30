@@ -44,3 +44,7 @@ python app/main.py
 - View tasks
 - Delete tasks
 - Persistent storage (file)
+
+### Task Status
+- ✔ completed
+- ✘ not completed
