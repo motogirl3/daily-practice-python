@@ -8,6 +8,14 @@ class TodoApp:
     self.tasks.append(task)
     save_tasks(self.tasks)
 
+def delete_task(self, index):
+    try:
+        removed = self.tasks.pop(index)
+        save_tasks(self.tasks)
+        print(f"Deleted: {removed}")
+    except IndexError:
+        print("Invalid task number")
+    
     def ```python id="h4v8xg"
 def show_tasks(self):
     if not self.tasks:
