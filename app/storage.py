@@ -1,13 +1,14 @@
-FILE_NAME = "tasks.txt"
+import json
+
+FILE_NAME = "tasks.json"
 
 def load_tasks():
     try:
         with open(FILE_NAME, "r") as f:
-            return f.read().splitlines()
-    except FileNotFoundError:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
         return []
 
 def save_tasks(tasks):
     with open(FILE_NAME, "w") as f:
-        for task in tasks:
-            f.write(task + "\n")
+        json.dump(tasks, f, indent=2)
