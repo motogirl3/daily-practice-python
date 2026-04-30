@@ -38,3 +38,9 @@ Simple number guessing game
 
 ```bash
 python app/main.py
+
+### Features
+- Add tasks
+- View tasks
+- Delete tasks
+- Persistent storage (file)
