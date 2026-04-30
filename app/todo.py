@@ -42,7 +42,11 @@ print("4. Exit")
         elif choice == "2":
             self.show_tasks()
 
-       elif choice == "3":
+     elif choice == "3":
+    if not self.tasks:
+        print("No tasks to delete")
+        continue
+
     self.show_tasks()
     try:
         index = int(input("Enter task number to delete: ")) - 1
