@@ -4,8 +4,12 @@ class TodoApp:
   def __init__(self):
     self.tasks = load_tasks()
 
-  def add_task(self, task):
-    self.tasks.append(task)
+ def add_task(self, task):
+    new_task = {
+        "text": task,
+        "done": False
+    }
+    self.tasks.append(new_task)
     save_tasks(self.tasks)
 
 def delete_task(self, index):
