@@ -54,7 +54,7 @@ class TodoApp:
             choice = input("Choose option: ")
 
             if choice == "1":
-                task = input("Enter task: ")
+                task = input("Enter new task: ")
                 self.add_task(task)
 
             elif choice == "2":
