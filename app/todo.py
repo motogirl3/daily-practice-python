@@ -28,9 +28,10 @@ def show_tasks(self):
 
     def run(self):
     while True:
-        print("\n1. Add task")
-        print("2. Show tasks")
-        print("3. Exit")
+       print("\n1. Add task")
+print("2. Show tasks")
+print("3. Delete task")
+print("4. Exit")
 
         choice = input("Choose option: ")
 
