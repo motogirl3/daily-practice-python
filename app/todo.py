@@ -28,7 +28,8 @@ def show_tasks(self):
 
     print("\nTasks:")
     for i, t in enumerate(self.tasks, 1):
-        print(f"{i}. {t}")
+    status = "✔" if t["done"] else "✘"
+    print(f"{i}. [{status}] {t['text']}")
 
     def run(self):
     while True:
