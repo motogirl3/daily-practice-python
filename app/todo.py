@@ -42,8 +42,16 @@ print("4. Exit")
         elif choice == "2":
             self.show_tasks()
 
-        elif choice == "3":
-            break
+       elif choice == "3":
+    self.show_tasks()
+    try:
+        index = int(input("Enter task number to delete: ")) - 1
+        self.delete_task(index)
+    except ValueError:
+        print("Please enter a valid number")
+
+elif choice == "4":
+    break
 
         else:
             print("Invalid choice")
