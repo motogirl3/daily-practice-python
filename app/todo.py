@@ -73,3 +73,22 @@ def mark_done(self, index):
         print("Task marked as done")
     except IndexError:
         print("Invalid task number")
+
+
+elif choice == "3":
+    if not self.tasks:
+        print("No tasks to update")
+        continue
+
+    self.show_tasks()
+    try:
+        index = int(input("Enter task number: ")) - 1
+        self.mark_done(index)
+    except ValueError:
+        print("Invalid input")
+
+elif choice == "4":
+    # delete логика (оставь как есть)
+
+elif choice == "5":
+    break
