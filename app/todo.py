@@ -31,7 +31,8 @@ class TodoApp:
             print("\nNo tasks yet")
             return
 
-        print("\nTasks:")
+  title = "Completed tasks" if show_done else "Active tasks"
+print(f"\n{title}:")
         for i, t in enumerate(self.tasks, 1):
             status = "✔" if t["done"] else "✘"
             print(f"{i}. [{status}] {t['text']}")
