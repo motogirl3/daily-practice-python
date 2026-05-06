@@ -70,12 +70,14 @@ def filter_tasks(self, show_done=True):
 
     def run(self):
         while True:
-            print("\n1. Add task")
-            print("2. Show tasks")
-            print("3. Mark as done")
-            print("4. Edit task")
-            print("5. Delete task")
-            print("6. Exit")
+print("\n1. Add task")
+print("2. Show tasks")
+print("3. Mark as done")
+print("4. Edit task")
+print("5. Delete task")
+print("6. Show completed")
+print("7. Show active")
+print("8. Exit")
 
             choice = input("Choose option: ")
 
