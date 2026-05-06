@@ -31,24 +31,25 @@ class TodoApp:
             print("\nNo tasks yet")
             return
 
-  title = "Completed tasks" if show_done else "Active tasks"
-print(f"\n{title}:")
+        print("\nAll tasks:")
         for i, t in enumerate(self.tasks, 1):
             status = "✔" if t["done"] else "✘"
             print(f"{i}. [{status}] {t['text']}")
 
-def filter_tasks(self, show_done=True):
-    filtered = [t for t in self.tasks if t["done"] == show_done]
+    def filter_tasks(self, show_done=True):
+        filtered = [t for t in self.tasks if t["done"] == show_done]
 
-    if not filtered:
-        print("\nNo tasks found")
-        return
+        if not filtered:
+            print("\nNo tasks found")
+            return
 
-    print("\nFiltered tasks:")
-    for i, t in enumerate(filtered, 1):
-        status = "✔" if t["done"] else "✘"
-        print(f"{i}. [{status}] {t['text']}")
-    
+        title = "Completed tasks" if show_done else "Active tasks"
+        print(f"\n{title}:")
+
+        for i, t in enumerate(filtered, 1):
+            status = "✔" if t["done"] else "✘"
+            print(f"{i}. [{status}] {t['text']}")
+
     def delete_task(self, index):
         try:
             removed = self.tasks.pop(index)
@@ -71,14 +72,14 @@ def filter_tasks(self, show_done=True):
 
     def run(self):
         while True:
-print("\n1. Add task")
-print("2. Show tasks")
-print("3. Mark as done")
-print("4. Edit task")
-print("5. Delete task")
-print("6. Show completed")
-print("7. Show active")
-print("8. Exit")
+            print("\n1. Add task")
+            print("2. Show tasks")
+            print("3. Mark as done")
+            print("4. Edit task")
+            print("5. Delete task")
+            print("6. Show completed")
+            print("7. Show active")
+            print("8. Exit")
 
             choice = input("Choose option: ")
 
@@ -118,13 +119,6 @@ print("8. Exit")
                 if not self.tasks:
                     print("No tasks to delete")
                     continue
-elif choice == "6":
-    self.filter_tasks(show_done=True)
-
-elif choice == "7":
-    self.filter_tasks(show_done=False)
-    elif choice == "8":
-    break
 
                 self.show_tasks()
                 try:
@@ -134,6 +128,12 @@ elif choice == "7":
                     print("Please enter a valid number")
 
             elif choice == "6":
+                self.filter_tasks(show_done=True)
+
+            elif choice == "7":
+                self.filter_tasks(show_done=False)
+
+            elif choice == "8":
                 break
 
             else:
