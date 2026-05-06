@@ -117,6 +117,13 @@ print("8. Exit")
                 if not self.tasks:
                     print("No tasks to delete")
                     continue
+elif choice == "6":
+    self.filter_tasks(show_done=True)
+
+elif choice == "7":
+    self.filter_tasks(show_done=False)
+    elif choice == "8":
+    break
 
                 self.show_tasks()
                 try:
