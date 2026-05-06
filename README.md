@@ -50,3 +50,7 @@ python app/main.py
 - ✘ not completed
 
 - Edit tasks
+
+### Filters
+- View completed tasks
+- View active (not completed) tasks
