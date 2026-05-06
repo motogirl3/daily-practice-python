@@ -15,6 +15,10 @@ class TodoApp:
 
 def edit_task(self, index, new_text):
     try:
+        if not new_text.strip():
+            print("Task cannot be empty")
+            return
+
         old_text = self.tasks[index]["text"]
         self.tasks[index]["text"] = new_text
         save_tasks(self.tasks)
