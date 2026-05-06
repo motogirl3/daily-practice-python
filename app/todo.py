@@ -13,6 +13,15 @@ class TodoApp:
         self.tasks.append(new_task)
         save_tasks(self.tasks)
 
+def edit_task(self, index, new_text):
+    try:
+        old_text = self.tasks[index]["text"]
+        self.tasks[index]["text"] = new_text
+        save_tasks(self.tasks)
+        print(f"Updated: {old_text} -> {new_text}")
+    except IndexError:
+        print("Invalid task number")
+    
     def show_tasks(self):
         if not self.tasks:
             print("\nNo tasks yet")
