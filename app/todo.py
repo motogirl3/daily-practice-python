@@ -36,6 +36,18 @@ class TodoApp:
             status = "✔" if t["done"] else "✘"
             print(f"{i}. [{status}] {t['text']}")
 
+def filter_tasks(self, show_done=True):
+    filtered = [t for t in self.tasks if t["done"] == show_done]
+
+    if not filtered:
+        print("\nNo tasks found")
+        return
+
+    print("\nFiltered tasks:")
+    for i, t in enumerate(filtered, 1):
+        status = "✔" if t["done"] else "✘"
+        print(f"{i}. [{status}] {t['text']}")
+    
     def delete_task(self, index):
         try:
             removed = self.tasks.pop(index)
