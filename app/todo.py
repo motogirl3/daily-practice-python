@@ -61,6 +61,19 @@ print("4. Edit task")
 print("5. Delete task")
 print("6. Exit")
 
+elif choice == "4":
+    if not self.tasks:
+        print("No tasks to edit")
+        continue
+
+    self.show_tasks()
+    try:
+        index = int(input("Enter task number: ")) - 1
+        new_text = input("Enter new text: ")
+        self.edit_task(index, new_text)
+    except ValueError:
+        print("Invalid input")
+        
             choice = input("Choose option: ")
 
             if choice == "1":
@@ -86,7 +99,20 @@ print("6. Exit")
                 if not self.tasks:
                     print("No tasks to delete")
                     continue
+elif choice == "5":
+    if not self.tasks:
+        print("No tasks to delete")
+        continue
 
+    self.show_tasks()
+    try:
+        index = int(input("Enter task number: ")) - 1
+        self.delete_task(index)
+    except ValueError:
+        print("Please enter a valid number")
+
+elif choice == "6":
+    break 
                 self.show_tasks()
                 try:
                     index = int(input("Enter task number: ")) - 1
