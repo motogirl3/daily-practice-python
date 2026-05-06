@@ -48,3 +48,5 @@ python app/main.py
 ### Task Status
 - ✔ completed
 - ✘ not completed
+
+- Edit tasks
